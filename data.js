@@ -1,6 +1,6 @@
 // Bu fayl generate.py ilə avtomatik yenilənir. Aşağıdakılar nümunədir.
 window.PDFS = [
- {"name":"Respublika olimpiadası 2024 – 9-cu sinif","file":"pdfs/Cəbr/respublika_2024_9.pdf","cat":"Cəbr","year":2024},
+ {"name":"Respublika olimpiadası 2024 – 9-cu sinif","file":"pdfs/Cəbr/ALTINNOKTA 1.pdf","cat":"Cəbr","year":2024},
  {"name":"Respublika olimpiadası 2023 – 10-cu sinif","file":"pdfs/Həndəsə/respublika_2023_10.pdf","cat":"Həndəsə","year":2023},
  {"name":"Rayon mərhələsi 2023","file":"pdfs/Kombinatorika/rayon_2023.pdf","cat":"Kombinatorika","year":2023},
  {"name":"Ədədlər nəzəriyyəsi tapşırıqları","file":"pdfs/Ədədlər nəzəriyyəsi/tapsiriqlar_2022.pdf","cat":"Ədədlər nəzəriyyəsi","year":2022},
