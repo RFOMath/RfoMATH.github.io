@@ -1,9 +1,61 @@
-// Bu fayl generate.py ilə avtomatik yenilənir. Aşağıdakılar nümunədir.
-window.PDFS = [
- {"name":"Respublika olimpiadası 2024 – 9-cu sinif","file":"pdfs/Cəbr/ALTINNOKTA 1.pdf","cat":"Cəbr","year":2024},
- {"name":"Respublika olimpiadası 2023 – 10-cu sinif","file":"pdfs/Həndəsə/respublika_2023_10.pdf","cat":"Həndəsə","year":2023},
- {"name":"Rayon mərhələsi 2023","file":"pdfs/Kombinatorika/rayon_2023.pdf","cat":"Kombinatorika","year":2023},
- {"name":"Ədədlər nəzəriyyəsi tapşırıqları","file":"pdfs/Ədədlər nəzəriyyəsi/tapsiriqlar_2022.pdf","cat":"Ədədlər nəzəriyyəsi","year":2022},
- {"name":"Beynəlxalq olimpiada seçmə turu 2021","file":"pdfs/Cəbr/secme_2021.pdf","cat":"Cəbr","year":2021},
- {"name":"Həndəsə həlləri 2020","file":"pdfs/Həndəsə/helller_2020.pdf","cat":"Həndəsə","year":2020}
-];
+// Nümunədir. generate.py işləyəndə sənin fayllarınla əvəzlənir.
+window.PDFS = [];
+window.TREE = {
+ "d": {
+  "Keçmiş illərin RFO-su": {
+   "d": {
+    "2017-2018": {
+     "d": {
+      "Final": {
+       "d": {},
+       "f": [
+        {
+         "name": "Riyaziyyat 10-11-ci sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2017-2018/Final/Riyaziyyat 10-11-ci sinif.pdf"
+        },
+        {
+         "name": "Riyaziyyat 9-cu sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2017-2018/Final/Riyaziyyat 9-cu sinif.pdf"
+        }
+       ]
+      }
+     },
+     "f": []
+    },
+    "2019-2020": {
+     "d": {
+      "Rayon turu": {
+       "d": {},
+       "f": [
+        {
+         "name": "Riyaziyyat 10-cu sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2019-2020/Rayon turu/Riyaziyyat 10-cu sinif.pdf"
+        },
+        {
+         "name": "Riyaziyyat 11-ci sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2019-2020/Rayon turu/Riyaziyyat 11-ci sinif.pdf"
+        },
+        {
+         "name": "Riyaziyyat 9-cu sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2019-2020/Rayon turu/Riyaziyyat 9-cu sinif.pdf"
+        }
+       ]
+      },
+      "Yarımfinal": {
+       "d": {},
+       "f": [
+        {
+         "name": "Riyaziyyat 9-cu sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2019-2020/Yarımfinal/Riyaziyyat 9-cu sinif.pdf"
+        }
+       ]
+      }
+     },
+     "f": []
+    }
+   },
+   "f": []
+  }
+ },
+ "f": []
+};
