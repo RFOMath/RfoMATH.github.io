@@ -89,6 +89,27 @@ select option{color:#111}
 .empty{text-align:center;padding:60px 20px;color:var(--muted)}
 footer{padding:50px 0 40px;text-align:center;color:var(--muted);font-size:.9rem}
 
+/* archive explorer */
+.sec{font:800 clamp(1.5rem,3.6vw,2.1rem)/1.1 var(--display);letter-spacing:-.02em}
+.sub{color:var(--muted);margin-top:6px}
+#archive{margin:26px 0 54px;scroll-margin-top:90px}
+.crumbs{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:18px 0;font-weight:600;font-size:.95rem}
+.crumbs a{padding:6px 14px;border-radius:999px;border:1px solid var(--glass-b);background:var(--glass);color:inherit;text-decoration:none;transition:background .25s}
+.crumbs a:hover{background:var(--glass-hi)}
+.crumbs a[aria-current]{background:linear-gradient(135deg,var(--a),var(--b));border-color:transparent;color:#fff}
+.crumbs span{color:var(--muted)}
+.folder{flex-direction:row;align-items:center;gap:14px;padding:18px;text-decoration:none;color:inherit}
+.folder svg{flex:none;width:50px;height:50px;color:hsl(var(--h) 85% 66%);filter:drop-shadow(0 6px 14px hsl(var(--h) 90% 60% / .45))}
+.folder b{display:block;font:700 1.05rem/1.25 var(--display)}
+.folder small{color:var(--muted)}
+.rows{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.row{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:18px;flex-wrap:wrap}
+.row .ic{flex:none;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font:800 .78rem var(--display);color:#fff;background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 85% 55%))}
+.rn{flex:1;min-width:180px;font-weight:600}
+.rn small{display:block;color:var(--muted);font-weight:400;font-size:.85rem}
+.row .actions{flex:none}
+.row .btn{flex:none;padding:8px 20px}
+
 /* viewer */
 .modal{position:fixed;inset:0;z-index:50;display:none;padding:clamp(0px,2vw,24px);background:rgba(5,8,20,.6);backdrop-filter:blur(8px)}
 .modal.open{display:block;animation:fade .3s both}
@@ -128,6 +149,16 @@ footer{padding:50px 0 40px;text-align:center;color:var(--muted);font-size:.9rem}
     </label>
   </section>
 
+  <section id="archive" hidden>
+    <h2 class="sec">Keçmiş illərin arxivi</h2>
+    <p class="sub">İl, mərhələ və sinif üzrə qovluqlardan seç.</p>
+    <nav class="crumbs" id="crumbs" aria-label="Qovluq yolu"></nav>
+    <div class="grid" id="afolders"></div>
+    <div class="rows" id="afiles"></div>
+  </section>
+
+  <section id="topics">
+  <h2 class="sec">Mövzular üzrə</h2>
   <div class="tools">
     <div class="chips" id="chips"></div>
     <div class="meta"><span id="count"></span>
@@ -139,6 +170,7 @@ footer{padding:50px 0 40px;text-align:center;color:var(--muted);font-size:.9rem}
 
   <div class="grid" id="grid"></div>
   <button class="btn glass more" id="more" hidden>Daha çox göstər</button>
+  </section>
 </main>
 <footer>Riyaziyyat olimpiadası arxivi</footer>
 
@@ -180,7 +212,7 @@ tb.onclick=()=>setTheme(root.dataset.theme==="dark"?"light":"dark");
 $("#chips").innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
 $("#chips").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;cat=b.dataset.c;
   document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));shown=PAGE;render()};
-$("#q").oninput=()=>{shown=PAGE;render()};
+$("#q").oninput=()=>{shown=PAGE;render();renderArch()};
 $("#sort").onchange=()=>{shown=PAGE;render()};
 $("#more").onclick=()=>{shown+=PAGE;render()};
 
@@ -245,6 +277,40 @@ addEventListener("keydown",e=>{
   if(e.key==="/"&&document.activeElement.tagName!=="INPUT"){e.preventDefault();$("#q").focus()}
 });
 render();
+
+/* archive explorer: folders from arxiv/ */
+const TREE=window.TREE||{d:{},f:[]};
+const ORD={"rayon turu":1,"yarımfinal":2,"final":3};
+const cmp=(a,b)=>((ORD[a.toLowerCase()]||0)-(ORD[b.toLowerCase()]||0))||a.localeCompare(b,"az",{numeric:true});
+const cnt=n=>n.c??(n.c=n.f.length+Object.values(n.d).reduce((s,x)=>s+cnt(x),0));
+const FOLDER='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h3.9c.6 0 1.2.3 1.6.8L12 6h6.5A2.5 2.5 0 0 1 21 8.5v9a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg>';
+const href=p=>"#a/"+p.map(encodeURIComponent).join("/");
+const curPath=()=>{try{return location.hash.startsWith("#a/")?location.hash.slice(3).split("/").filter(Boolean).map(decodeURIComponent):[]}catch(e){return[]}};
+const walk=p=>p.reduce((n,s)=>n&&n.d[s],TREE);
+function*allFiles(n,p){for(const f of n.f)yield{f,p};for(const k of Object.keys(n.d))yield*allFiles(n.d[k],[...p,k])}
+const row=(f,sub)=>`<div class="row glass" style="--h:${hue(f.name)}"><div class="ic">PDF</div><div class="rn">${esc(f.name)}${sub?`<small>${esc(sub)}</small>`:""}</div>
+  <div class="actions"><button class="btn primary" data-f="${esc(f.file)}" data-n="${esc(f.name)}">Bax</button><a class="btn" href="${url(f.file)}" download="${esc(f.file.split("/").pop())}">Yüklə</a></div></div>`;
+function renderArch(){
+  const sec=$("#archive");
+  if(!Object.keys(TREE.d).length&&!TREE.f.length){sec.hidden=true;return}
+  sec.hidden=false;
+  const q=$("#q").value.trim().toLowerCase(),C=$("#crumbs"),F=$("#afolders"),R=$("#afiles");
+  if(q){
+    const hits=[...allFiles(TREE,[])].filter(h=>`${h.f.name} ${h.p.join(" ")}`.toLowerCase().includes(q));
+    C.innerHTML=`<span>${hits.length} nəticə</span>`;F.innerHTML="";
+    R.innerHTML=hits.slice(0,60).map(h=>row(h.f,h.p.join("  /  "))).join("");
+    return;
+  }
+  let path=curPath(),node=walk(path);
+  if(!node){path=[];node=TREE}
+  C.innerHTML=`<a href="#a/"${path.length?"":' aria-current="page"'}>Arxiv</a>`+path.map((s,i)=>`<span>/</span><a href="${href(path.slice(0,i+1))}"${i===path.length-1?' aria-current="page"':""}>${esc(s)}</a>`).join("");
+  F.innerHTML=Object.keys(node.d).sort(cmp).map(n=>`<a class="card glass folder" style="--h:${hue(n)}" href="${href([...path,n])}">${FOLDER}<span><b>${esc(n)}</b><small>${cnt(node.d[n])} fayl</small></span></a>`).join("");
+  R.innerHTML=[...node.f].sort((a,b)=>cmp(a.name,b.name)).map(f=>row(f)).join("")||(Object.keys(node.d).length?"":`<div class="empty">Bu qovluq boşdur.</div>`);
+}
+$("#archive").addEventListener("click",e=>{const b=e.target.closest("[data-f]");if(b)openPdf({name:b.dataset.n,file:b.dataset.f})});
+addEventListener("hashchange",()=>{renderArch();if(location.hash.startsWith("#a/"))$("#archive").scrollIntoView({behavior:"smooth",block:"start"})});
+$("#topics").hidden=!list.length;
+renderArch();
 </script>
 </body>
 </html>
