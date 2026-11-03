@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RfoMATH - Riyaziyyat PDF Kitabxanası</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #38bdf8;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            background-color: #1e293b;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-box input:focus {
+            border-color: #38bdf8;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .pdf-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .pdf-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .pdf-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #f1f5f9;
+            margin-bottom: 10px;
+        }
+
+        .pdf-desc {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .btn-view {
+            background-color: #334155;
+            color: #fff;
+        }
+
+        .btn-view:hover {
+            background-color: #475569;
+        }
+
+        .btn-download {
+            background-color: #0284c7;
+            color: #fff;
+        }
+
+        .btn-download:hover {
+            background-color: #0369a1;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 50px;
+            color: #64748b;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>RfoMATH</h1>
+        <p>Riyaziyyat PDF Materialları və Testlər Bazası</p>
+    </header>
+
+    <!-- Axtarış hissəsi (Gələcəkdə 100-lərlə PDF arasında tapmaq üçün lazım olacaq) -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="PDF adı və ya mövzu axtar...">
+    </div>
+
+    <div class="container" id="pdfContainer">
+        
+        <!-- PDF Sənəd 1 -->
+        <div class="pdf-card">
+            <div>
+                <div class="pdf-title">Riyaziyyat Test Toplusu I Hissə</div>
+                <div class="pdf-desc">İbtidai və orta siniflər üçün misal və məsələlər.</div>
+            </div>
+            <div class="btn-group">
+                <!-- target="_blank" faylı yeni pəncərədə canlı açır -->
+                <a href="fayllar/test1.pdf" target="_blank" class="btn btn-view">Bax</a>
+                <!-- download atributu birbaşa yükləyir -->
+                <a href="fayllar/test1.pdf" download class="btn btn-download">Yüklə</a>
+            </div>
+        </div>
+
+        <!-- PDF Sənəd 2 -->
+        <div class="pdf-card">
+            <div>
+                <div class="pdf-title">İnteqrallar və Törəmələr</div>
+                <div class="pdf-desc">Abituriyentlər üçün xüsusi düsturlar və izahatlar.</div>
+            </div>
+            <div class="btn-group">
+                <a href="fayllar/inteqral.pdf" target="_blank" class="btn btn-view">Bax</a>
+                <a href="fayllar/inteqral.pdf" download class="btn btn-download">Yüklə</a>
+            </div>
+        </div>
+
+        <!-- 100-lərlə PDF əlavə etmək üçün sadəcə yuxarıdakı .pdf-card blokunu kopyalayıb çoğaltmaq kifayətdir -->
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 RfoMATH. Bütün hüquqlar qorunur.</p>
+    </footer>
+
+</body>
+</html>
