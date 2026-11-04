@@ -1,4 +1,3 @@
-// Nümunədir. generate.py işləyəndə sənin fayllarınla əvəzlənir.
 window.PDFS = [];
 window.TREE = {
  "d": {
@@ -44,16 +43,12 @@ window.TREE = {
        "d": {},
        "f": [
         {
-         "name": "Riyaziyyat 9-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2017-2018/Final/Riyaziyyat 9-cu sinif.pdf"
+         "name": "Riyaziyyat aşağı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2017-2018/Final/Riyaziyyat aşağı yaş qrupu.pdf"
         },
         {
-         "name": "Riyaziyyat 10-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2017-2018/Final/Riyaziyyat 10-cu sinif.pdf"
-        },
-        {
-         "name": "Riyaziyyat 11-ci sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2017-2018/Final/Riyaziyyat 11-ci sinif.pdf"
+         "name": "Riyaziyyat yuxarı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2017-2018/Final/Riyaziyyat yuxarı yaş qrupu.pdf"
         }
        ]
       }
@@ -100,16 +95,12 @@ window.TREE = {
        "d": {},
        "f": [
         {
-         "name": "Riyaziyyat 9-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2018-2019/Final/Riyaziyyat 9-cu sinif.pdf"
+         "name": "Riyaziyyat aşağı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2018-2019/Final/Riyaziyyat aşağı yaş qrupu.pdf"
         },
         {
-         "name": "Riyaziyyat 10-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2018-2019/Final/Riyaziyyat 10-cu sinif.pdf"
-        },
-        {
-         "name": "Riyaziyyat 11-ci sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2018-2019/Final/Riyaziyyat 11-ci sinif.pdf"
+         "name": "Riyaziyyat yuxarı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2018-2019/Final/Riyaziyyat yuxarı yaş qrupu.pdf"
         }
        ]
       }
@@ -156,16 +147,12 @@ window.TREE = {
        "d": {},
        "f": [
         {
-         "name": "Riyaziyyat 9-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2019-2020/Final/Riyaziyyat 9-cu sinif.pdf"
+         "name": "Riyaziyyat aşağı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2019-2020/Final/Riyaziyyat aşağı yaş qrupu.pdf"
         },
         {
-         "name": "Riyaziyyat 10-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2019-2020/Final/Riyaziyyat 10-cu sinif.pdf"
-        },
-        {
-         "name": "Riyaziyyat 11-ci sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2019-2020/Final/Riyaziyyat 11-ci sinif.pdf"
+         "name": "Riyaziyyat yuxarı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2019-2020/Final/Riyaziyyat yuxarı yaş qrupu.pdf"
         }
        ]
       }
@@ -212,16 +199,12 @@ window.TREE = {
        "d": {},
        "f": [
         {
-         "name": "Riyaziyyat 9-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Final/Riyaziyyat 9-cu sinif.pdf"
+         "name": "Riyaziyyat aşağı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Final/Riyaziyyat aşağı yaş qrupu.pdf"
         },
         {
-         "name": "Riyaziyyat 10-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Final/Riyaziyyat 10-cu sinif.pdf"
-        },
-        {
-         "name": "Riyaziyyat 11-ci sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Final/Riyaziyyat 11-ci sinif.pdf"
+         "name": "Riyaziyyat yuxarı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Final/Riyaziyyat yuxarı yaş qrupu.pdf"
         }
        ]
       }
@@ -268,16 +251,12 @@ window.TREE = {
        "d": {},
        "f": [
         {
-         "name": "Riyaziyyat 9-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2021-2022/Final/Riyaziyyat 9-cu sinif.pdf"
+         "name": "Riyaziyyat aşağı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2021-2022/Final/Riyaziyyat aşağı yaş qrupu.pdf"
         },
         {
-         "name": "Riyaziyyat 10-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2021-2022/Final/Riyaziyyat 10-cu sinif.pdf"
-        },
-        {
-         "name": "Riyaziyyat 11-ci sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2021-2022/Final/Riyaziyyat 11-ci sinif.pdf"
+         "name": "Riyaziyyat yuxarı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2021-2022/Final/Riyaziyyat yuxarı yaş qrupu.pdf"
         }
        ]
       }
@@ -324,16 +303,12 @@ window.TREE = {
        "d": {},
        "f": [
         {
-         "name": "Riyaziyyat 9-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2022-2023/Final/Riyaziyyat 9-cu sinif.pdf"
+         "name": "Riyaziyyat aşağı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2022-2023/Final/Riyaziyyat aşağı yaş qrupu.pdf"
         },
         {
-         "name": "Riyaziyyat 10-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2022-2023/Final/Riyaziyyat 10-cu sinif.pdf"
-        },
-        {
-         "name": "Riyaziyyat 11-ci sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2022-2023/Final/Riyaziyyat 11-ci sinif.pdf"
+         "name": "Riyaziyyat yuxarı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2022-2023/Final/Riyaziyyat yuxarı yaş qrupu.pdf"
         }
        ]
       }
@@ -380,16 +355,12 @@ window.TREE = {
        "d": {},
        "f": [
         {
-         "name": "Riyaziyyat 9-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2023-2024/Final/Riyaziyyat 9-cu sinif.pdf"
+         "name": "Riyaziyyat aşağı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2023-2024/Final/Riyaziyyat aşağı yaş qrupu.pdf"
         },
         {
-         "name": "Riyaziyyat 10-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2023-2024/Final/Riyaziyyat 10-cu sinif.pdf"
-        },
-        {
-         "name": "Riyaziyyat 11-ci sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2023-2024/Final/Riyaziyyat 11-ci sinif.pdf"
+         "name": "Riyaziyyat yuxarı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2023-2024/Final/Riyaziyyat yuxarı yaş qrupu.pdf"
         }
        ]
       }
@@ -436,16 +407,12 @@ window.TREE = {
        "d": {},
        "f": [
         {
-         "name": "Riyaziyyat 9-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2024-2025/Final/Riyaziyyat 9-cu sinif.pdf"
+         "name": "Riyaziyyat aşağı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2024-2025/Final/Riyaziyyat aşağı yaş qrupu.pdf"
         },
         {
-         "name": "Riyaziyyat 10-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2024-2025/Final/Riyaziyyat 10-cu sinif.pdf"
-        },
-        {
-         "name": "Riyaziyyat 11-ci sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2024-2025/Final/Riyaziyyat 11-ci sinif.pdf"
+         "name": "Riyaziyyat yuxarı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2024-2025/Final/Riyaziyyat yuxarı yaş qrupu.pdf"
         }
        ]
       }
@@ -492,16 +459,12 @@ window.TREE = {
        "d": {},
        "f": [
         {
-         "name": "Riyaziyyat 9-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2025-2026/Final/Riyaziyyat 9-cu sinif.pdf"
+         "name": "Riyaziyyat aşağı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2025-2026/Final/Riyaziyyat aşağı yaş qrupu.pdf"
         },
         {
-         "name": "Riyaziyyat 10-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2025-2026/Final/Riyaziyyat 10-cu sinif.pdf"
-        },
-        {
-         "name": "Riyaziyyat 11-ci sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2025-2026/Final/Riyaziyyat 11-ci sinif.pdf"
+         "name": "Riyaziyyat yuxarı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2025-2026/Final/Riyaziyyat yuxarı yaş qrupu.pdf"
         }
        ]
       }
