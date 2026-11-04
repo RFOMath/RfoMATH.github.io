@@ -253,6 +253,10 @@ window.TREE = {
        "d": {},
        "f": [
         {
+         "name": "Riyaziyyat 8-ci sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2025-2026/Rayon turu/Riyaziyyat 8-ci sinif.pdf"
+        },
+        {
          "name": "Riyaziyyat 9-cu sinif",
          "file": "arxiv/Keçmiş illərin RFO-su/2022-2023/Rayon turu/Riyaziyyat 9-cu sinif.pdf"
         },
@@ -300,6 +304,10 @@ window.TREE = {
       "Rayon turu": {
        "d": {},
        "f": [
+        {
+         "name": "Riyaziyyat 8-ci sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2025-2026/Rayon turu/Riyaziyyat 8-ci sinif.pdf"
+        },
         {
          "name": "Riyaziyyat 9-cu sinif",
          "file": "arxiv/Keçmiş illərin RFO-su/2023-2024/Rayon turu/Riyaziyyat 9-cu sinif.pdf"
@@ -349,6 +357,10 @@ window.TREE = {
        "d": {},
        "f": [
         {
+         "name": "Riyaziyyat 8-ci sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2025-2026/Rayon turu/Riyaziyyat 8-ci sinif.pdf"
+        },
+        {
          "name": "Riyaziyyat 9-cu sinif",
          "file": "arxiv/Keçmiş illərin RFO-su/2024-2025/Rayon turu/Riyaziyyat 9-cu sinif.pdf"
         },
@@ -396,6 +408,10 @@ window.TREE = {
       "Rayon turu": {
        "d": {},
        "f": [
+        {
+         "name": "Riyaziyyat 8-ci sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2025-2026/Rayon turu/Riyaziyyat 8-ci sinif.pdf"
+        },
         {
          "name": "Riyaziyyat 9-cu sinif",
          "file": "arxiv/Keçmiş illərin RFO-su/2025-2026/Rayon turu/Riyaziyyat 9-cu sinif.pdf"
