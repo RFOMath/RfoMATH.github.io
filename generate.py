@@ -5,6 +5,7 @@ arxiv/   -> "Keçmiş illərin arxivi" bölməsi (istənilən dərinlikdə qovlu
            məs: arxiv/Keçmiş illərin RFO-su/2019-2020/Final/Riyaziyyat 9-cu sinif.pdf
            arxiv/ içindəki hər yeni qovluq avtomatik yeni bölmə olur.
 pdfs/    -> "Mövzular üzrə" bölməsi (pdfs/<Mövzu>/fayl.pdf)
+kitablar/ -> "Kitablar" bölməsi (alt qovluq = kateqoriya; eyni adlı .jpg/.png kitabın üz qabığı olur)
 
 Word (.docx) faylları varsa və kompüterdə LibreOffice qurulubsa, PDF-ə özü çevrilir."""
 import json, re, shutil, subprocess
@@ -56,11 +57,26 @@ def build_topics(base):
                       "cat": parts[0] if len(parts) > 1 else "Digər", "year": int(m.group()) if m else 0})
     return items
 
-for folder in ("arxiv", "pdfs"):
+for folder in ("arxiv", "pdfs", "kitablar"):
     convert_docs(root / folder)
-topics, tree = build_topics(root / "pdfs"), build_tree(root / "arxiv")
+def build_books(base):
+    items = []
+    if not base.exists():
+        return items
+    for f in sorted(base.rglob("*.pdf")):
+        parts = f.relative_to(base).parts
+        cover = next((f.with_suffix("." + e) for e in ("jpg", "jpeg", "png", "webp") if f.with_suffix("." + e).exists()), None)
+        b = {"name": disp(f.stem), "file": f.relative_to(root).as_posix(),
+             "cat": parts[0] if len(parts) > 1 else "Kitablar", "size": round(f.stat().st_size / 1048576, 1)}
+        if cover:
+            b["cover"] = cover.relative_to(root).as_posix()
+        items.append(b)
+    return items
+
+topics, tree, books = build_topics(root / "pdfs"), build_tree(root / "arxiv"), build_books(root / "kitablar")
 (root / "data.js").write_text(
     "window.PDFS = " + json.dumps(topics, ensure_ascii=False, indent=1) + ";\n"
-    "window.TREE = " + json.dumps(tree, ensure_ascii=False, indent=1) + ";\n", encoding="utf-8")
+    "window.TREE = " + json.dumps(tree, ensure_ascii=False, indent=1) + ";\n"
+    "window.BOOKS = " + json.dumps(books, ensure_ascii=False, indent=1) + ";\n", encoding="utf-8")
 total = sum(1 for _ in (root / "arxiv").rglob("*.pdf")) if (root / "arxiv").exists() else 0
-print(f"arxiv: {total} PDF, mövzular: {len(topics)} PDF -> data.js")
+print(f"arxiv: {total} PDF, kitab: {len(books)}, mövzular: {len(topics)} -> data.js")
