@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin · Gündəlik suallar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e22;--text:#eef0ff;--muted:#a3a9cf;--glass:rgba(255,255,255,.07);--gb:rgba(255,255,255,.16);--a:#8b6cff;--b:#22d3ee;--c:#ff6fb1;--display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"Manrope","Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+[hidden]{display:none!important}
+body{font-family:var(--body);background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5}
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;animation:d 24s ease-in-out infinite alternate}
+.b1{width:46vmax;height:46vmax;background:var(--a);top:-14vmax;left:-10vmax}
+.b2{width:38vmax;height:38vmax;background:var(--b);bottom:-14vmax;right:-8vmax;animation-delay:-8s}
+@keyframes d{to{transform:translate(7vmax,5vmax) scale(1.15)}}
+.glass{background:var(--glass);border:1px solid var(--gb);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:22px;box-shadow:0 20px 50px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.2)}
+.wrap{width:min(860px,100% - 28px);margin:0 auto;padding:24px 0 30px}
+.hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.back{color:var(--muted);text-decoration:none;font-weight:600}
+h1{font:800 clamp(1.8rem,5vw,2.7rem)/1.1 var(--display);letter-spacing:-.02em}
+h2{font:700 1.2rem var(--display);margin:30px 0 12px}
+.muted,.hint{color:var(--muted);font-size:.9rem}
+.hint{margin-top:10px}
+.pad{padding:20px;margin-top:16px}
+label{display:block;font-size:.85rem;color:var(--muted);margin:12px 0 5px}
+input,textarea,select{width:100%;font:inherit;color:inherit;background:rgba(255,255,255,.06);border:1px solid var(--gb);border-radius:12px;padding:10px 12px}
+select option{color:#111}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--b);outline-offset:1px}
+textarea{min-height:90px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn{font:600 .95rem var(--body);color:inherit;cursor:pointer;padding:10px 18px;border-radius:14px;border:1px solid var(--gb);background:var(--glass);text-decoration:none;display:inline-block;transition:transform .25s,background .25s}
+.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.14)}
+.btn:disabled{opacity:.5;cursor:wait;transform:none}
+.primary{background:linear-gradient(135deg,var(--a),var(--b));border-color:transparent;color:#fff}
+.big{padding:14px 34px;font-size:1.05rem}
+.sm{padding:6px 12px;font-size:.85rem}
+.dng{color:#ff8a9b}
+.link{background:none;border:0;color:var(--b);cursor:pointer;font:inherit;margin-top:10px;padding:0}
+.qf{padding:18px;margin-top:14px}
+.qh{display:flex;justify-content:space-between;align-items:center}
+.qh b{font:800 1.1rem var(--display)}
+.qh select{width:auto;padding:6px 10px}
+.x{background:none;border:0;color:var(--muted);cursor:pointer;font-size:1.1rem;margin-left:8px}
+.op{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+.op b{flex:none;width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.12)}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.pub{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:22px}
+.note{font-size:.92rem;white-space:pre-line;margin-top:10px}
+.pub .note{margin:0;flex:1;min-width:200px}
+.note.err{color:#ff8a9b}.note.ok{color:#6ee7a8}.note.warn{color:#fcd34d}
+.pd{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--gb)}
+.pd:last-child{border:0}
+footer{text-align:center;color:var(--muted);font-size:.8rem;padding:10px 0 40px;letter-spacing:.04em}
+@media(max-width:560px){.row2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i></div>
+<main class="wrap">
+  <div class="hd"><a class="back" href="index.html">Sayta qayıt</a><button class="btn sm" id="out" hidden>Çıxış</button></div>
+  <h1>Admin paneli</h1>
+  <p class="muted" style="margin-top:8px">Gündəlik sualları buradan paylaş. Dərc edəndə birbaşa GitHub reposuna yazılır.</p>
+
+  <section id="gate" class="glass pad">
+    <h2 id="gt" style="margin-top:0">İlk qurulum</h2>
+    <form id="gf" autocomplete="off">
+      <div id="setup">
+        <label for="repo">Repo (sahib/ad)</label><input id="repo" value="RFOMath/RfoMATH.github.io">
+        <div class="row2">
+          <div><label for="br">Branch</label><input id="br" value="main"></div>
+          <div><label for="pw1">Yeni parol (min. 6 simvol)</label><input id="pw1" type="password" autocomplete="new-password"></div>
+        </div>
+        <label for="tok">GitHub token</label><input id="tok" type="password" placeholder="github_pat_…">
+        <p class="hint">GitHub → Settings → Developer settings → Fine-grained tokens → Generate new token. Yalnız bu repo seçilsin, Permissions → <b>Contents: Read and write</b>. Token bu cihazda parolunla şifrələnib saxlanır, başqa yerə göndərilmir.</p>
+      </div>
+      <div id="login" hidden>
+        <label for="pw2">Parol</label><input id="pw2" type="password" autocomplete="current-password">
+        <button type="button" class="link" id="reset">Token-i sıfırla</button>
+      </div>
+      <div style="margin-top:16px"><button class="btn primary" id="go">Saxla və daxil ol</button></div>
+      <p id="gnote" class="note" role="alert"></p>
+    </form>
+  </section>
+
+  <section id="app" hidden>
+    <div class="glass pad">
+      <div class="row2">
+        <div><label for="date">Tarix</label><input type="date" id="date"></div>
+        <div><label for="title">Başlıq (istəyə bağlı)</label><input id="title" placeholder="məs. Həndəsə günü"></div>
+      </div>
+      <p id="dnote" class="note"></p>
+    </div>
+    <div id="qs"></div>
+    <div class="bar">
+      <button class="btn" id="addq">+ Sual əlavə et</button>
+      <button class="btn" id="bulkbtn">Toplu yapışdır</button>
+    </div>
+    <div class="glass pad" id="bulk" hidden>
+      <label for="bt">Sualları yapışdır</label>
+      <textarea id="bt" rows="9" placeholder="1. Sual mətni...&#10;A) ...&#10;B) ...&#10;C) ...&#10;Cavab: B&#10;Həll: ..."></textarea>
+      <div style="margin-top:12px"><button class="btn primary" id="bgo">Siyahıya əlavə et</button></div>
+      <p class="hint">Hər sual nömrə ilə başlayır (1. 2. 3.). Variantlar A) B) C)… kimi yazılır, sonra "Cavab:" və istəsən "Həll:" gəlir. Variant yoxdursa sual açıq sual olur. Riyazi ifadələr $x^2+1$ kimi yazılır.</p>
+    </div>
+    <div class="pub"><button class="btn primary big" id="pub">Dərc et</button><span id="note" class="note" role="status"></span></div>
+    <h2>Əvvəlki günlər</h2>
+    <div id="past" class="glass pad" style="margin-top:0"></div>
+  </section>
+</main>
+<footer>Created by Jovzizadeh Elmir</footer>
+
+<script>
+const $=s=>document.querySelector(s),L="ABCDE",LS="rfo_admin_v1",DR="rfo_admin_draft";
+const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+const te=new TextEncoder(),td=new TextDecoder();
+const b64=u=>{if(typeof u==="string")u=te.encode(u);let r="";for(const c of u)r+=String.fromCharCode(c);return btoa(r)};
+const ub64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+const today=()=>new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+const blank=()=>({text:"",type:"mcq",options:["","","",""],answer:"",solution:"",img:""});
+let cfg,tok,S={date:today(),title:"",q:[]},days=[];
+const note=(el,t,k)=>{el.textContent=t;el.className="note "+(k||"")};
+
+/* parol ilə şifrələmə (AES-GCM + PBKDF2) */
+async function dk(pw,salt){const m=await crypto.subtle.importKey("raw",te.encode(pw),"PBKDF2",false,["deriveKey"]);
+  return crypto.subtle.deriveKey({name:"PBKDF2",salt,iterations:200000,hash:"SHA-256"},m,{name:"AES-GCM",length:256},false,["encrypt","decrypt"])}
+async function seal(t,pw){const salt=crypto.getRandomValues(new Uint8Array(16)),iv=crypto.getRandomValues(new Uint8Array(12));
+  const ct=await crypto.subtle.encrypt({name:"AES-GCM",iv},await dk(pw,salt),te.encode(t));return JSON.stringify([b64(salt),b64(iv),b64(new Uint8Array(ct))])}
+async function unseal(blob,pw){const[s,i,c]=JSON.parse(blob).map(ub64);return td.decode(await crypto.subtle.decrypt({name:"AES-GCM",iv:i},await dk(pw,s),c))}
+
+/* GitHub API */
+const api=p=>`https://api.github.com/repos/${cfg.o}/${cfg.r}/${p}`;
+const H=()=>({Authorization:"Bearer "+tok,Accept:"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"});
+async function ghErr(r){let m="";try{m=(await r.json()).message||""}catch(e){}
+  const e=new Error(r.status===401?"Token etibarsızdır və ya müddəti bitib.":r.status===403?"İcazə yoxdur (və ya sorğu limiti dolub). Token-də Contents: Read and write icazəsi olmalıdır.":r.status===404?"Repo, branch və ya token icazəsi tapılmadı. Repo adını və token-in bu repoya çıxışını yoxla.":"GitHub xətası ("+r.status+"): "+m);e.status=r.status;return e}
+async function net(p,o){try{return await fetch(p,o)}catch(e){throw new Error("İnternet bağlantısı yoxdur və ya GitHub əlçatan deyil.")}}
+async function getFile(){
+  const r=await net(api("contents/data/questions.json?ref="+encodeURIComponent(cfg.b)+"&t="+Date.now()),{headers:H(),cache:"no-store"});
+  if(r.status===404)return{sha:null,data:{v:1,days:[]}};
+  if(!r.ok)throw await ghErr(r);
+  const j=await r.json();let d;
+  try{d=JSON.parse(td.decode(ub64(j.content.replace(/\s/g,""))))}catch(e){throw new Error("questions.json oxunmadı (format pozulub).")}
+  if(!d||!Array.isArray(d.days))d={v:1,days:[]};
+  return{sha:j.sha,data:d}}
+async function commit(mut,msg){
+  for(let t=0;t<3;t++){
+    const f=await getFile();mut(f.data);f.data.days.sort((a,b)=>b.date.localeCompare(a.date));
+    const body={message:msg,content:b64(JSON.stringify(f.data,null,1)),branch:cfg.b};if(f.sha)body.sha=f.sha;
+    const r=await net(api("contents/data/questions.json"),{method:"PUT",headers:{...H(),"Content-Type":"application/json"},body:JSON.stringify(body)});
+    if(r.ok)return f.data;
+    if(r.status!==409&&r.status!==422)throw await ghErr(r);
+    await new Promise(z=>setTimeout(z,700))}
+  throw new Error("Fayl eyni anda dəyişdirildi. Bir az gözləyib yenidən yoxla.")}
+
+/* redaktor */
+const save=()=>{try{localStorage.setItem(DR,JSON.stringify(S))}catch(e){}};
+function dnote(){const has=days.some(d=>d.date===S.date);note($("#dnote"),has?"Bu tarixdə artıq suallar var. Dərc etsən əvəz olunacaq.":"",has?"warn":"")}
+function qform(q,i){
+  const mcq=q.type==="mcq";
+  return `<div class="glass qf"><div class="qh"><b>Sual ${i+1}</b><span><select data-i="${i}" data-k="type"><option value="mcq"${mcq?" selected":""}>Varyantlı</option><option value="open"${mcq?"":" selected"}>Açıq</option></select><button class="x" data-del="${i}" title="Sil">✕</button></span></div>
+  <label>Sual mətni (düstur üçün $x^2+1$ yaz)</label><textarea data-i="${i}" data-k="text">${esc(q.text)}</textarea>
+  ${mcq?`<label>Variantlar</label>${q.options.map((o,j)=>`<div class="op"><b>${L[j]}</b><input data-i="${i}" data-o="${j}" value="${esc(o)}"></div>`).join("")}
+  <div class="bar" style="margin:0 0 4px"><button class="btn sm" data-add="${i}">+ variant</button><button class="btn sm" data-rm="${i}">− variant</button></div>
+  <label>Düzgün cavab</label><select data-i="${i}" data-k="answer"><option value="">Seçilməyib</option>${q.options.map((_,j)=>`<option value="${L[j]}"${q.answer===L[j]?" selected":""}>${L[j]}</option>`).join("")}</select>`
+  :`<label>Cavab</label><input data-i="${i}" data-k="answer" value="${esc(q.answer)}">`}
+  <label>Həll / izah (istəyə bağlı)</label><textarea data-i="${i}" data-k="solution">${esc(q.solution)}</textarea>
+  <label>Şəkil yolu (istəyə bağlı, məs. data/img/2026-11-04-1.png)</label><input data-i="${i}" data-k="img" value="${esc(q.img)}"></div>`}
+function render(){$("#date").value=S.date;$("#title").value=S.title;$("#qs").innerHTML=S.q.map(qform).join("");dnote()}
+function pastList(){$("#past").innerHTML=days.length?days.map(d=>`<div class="pd"><div><b>${esc(d.date)}</b> ${d.title?esc(d.title)+" · ":""}<span class="muted">${d.items.length} sual</span></div><span><a class="btn sm" href="index.html#s/${esc(d.date)}" target="_blank" rel="noopener">Bax</a> <button class="btn sm" data-edit="${esc(d.date)}">Redaktə</button> <button class="btn sm dng" data-rmday="${esc(d.date)}">Sil</button></span></div>`).join(""):`<p class="muted">Hələ paylaşılmış gün yoxdur.</p>`}
+
+document.addEventListener("input",e=>{
+  const t=e.target,i=t.dataset.i;
+  if(t.id==="date"){S.date=t.value;dnote();save();return}
+  if(t.id==="title"){S.title=t.value;save();return}
+  if(i===undefined||!S.q[i])return;
+  if(t.dataset.o!==undefined)S.q[i].options[+t.dataset.o]=t.value;
+  else if(t.dataset.k==="type"){S.q[i].type=t.value;S.q[i].answer="";if(t.value==="mcq"&&S.q[i].options.length<2)S.q[i].options=["","","",""];render()}
+  else if(t.dataset.k)S.q[i][t.dataset.k]=t.value;
+  save()});
+document.addEventListener("click",e=>{
+  const b=e.target.closest("button");if(!b)return;const d=b.dataset;
+  if(d.del!==undefined){if(confirm("Bu sual silinsin?")){S.q.splice(+d.del,1);if(!S.q.length)S.q.push(blank());render();save()}}
+  else if(d.add!==undefined){const o=S.q[+d.add].options;if(o.length<5){o.push("");render();save()}}
+  else if(d.rm!==undefined){const q=S.q[+d.rm];if(q.options.length>2){q.options.pop();if(!L.slice(0,q.options.length).includes(q.answer))q.answer="";render();save()}}
+  else if(d.edit!==undefined)loadDay(d.edit);
+  else if(d.rmday!==undefined)rmDay(d.rmday)});
+$("#addq").onclick=()=>{S.q.push(blank());render();save();const f=document.querySelectorAll(".qf");f[f.length-1].scrollIntoView({behavior:"smooth",block:"center"})};
+$("#bulkbtn").onclick=()=>{$("#bulk").hidden=!$("#bulk").hidden};
+
+function loadDay(date){
+  const d=days.find(x=>x.date===date);if(!d)return;
+  S={date:d.date,title:d.title||"",q:d.items.map(q=>{const m=q.options&&q.options.length;return{text:q.text||"",type:m?"mcq":"open",options:m?[...q.options]:["","","",""],answer:q.answer||"",solution:q.solution||"",img:q.img||""}})};
+  render();save();window.scrollTo({top:0,behavior:"smooth"});note($("#note"),date+" redaktə olunur. Dərc edəndə köhnəsi əvəz olunacaq.","warn")}
+async function rmDay(date){
+  if(!confirm(date+" tarixinin sualları tamamilə silinsin?"))return;
+  const el=$("#note");note(el,"Silinir…","");
+  try{days=(await commit(d=>{d.days=d.days.filter(x=>x.date!==date)},"Suallar silindi: "+date)).days;pastList();dnote();note(el,"Silindi.","ok")}
+  catch(e){note(el,e.message,"err")}}
+
+/* toplu yapışdırma */
+function fin(c){
+  const opts=c.options.map(o=>o.trim()),mcq=opts.length>=2;
+  let a=c.answer.trim();if(mcq){const m=a.match(/[A-Ea-e]/);a=m?m[0].toUpperCase():""}
+  return{text:c.text.trim(),type:mcq?"mcq":"open",options:mcq?opts:["","","",""],answer:a,solution:c.solution.trim(),img:""}}
+function parseBulk(t){
+  const out=[];let c=null,mode=null;
+  const mk=x=>({text:x,options:[],answer:"",solution:""});
+  const push=()=>{if(c&&c.text.trim())out.push(fin(c));c=null};
+  for(const raw of t.replace(/\r/g,"").split("\n")){
+    const l=raw.trim();let m;
+    if((m=l.match(/^(\d{1,3})\s*[.)]\s+(.*)$/))){push();c=mk(m[2]);mode="t";continue}
+    if(!c){if(l){c=mk(l);mode="t"}continue}
+    if(mode!=="s"&&(m=l.match(/^([A-Ea-e])\s*[.)]\s*(.*)$/))){c.options.push(m[2]);mode="o";continue}
+    if((m=l.match(/^(?:cavab|answer)\s*[:：]\s*(.*)$/i))){c.answer=m[1];mode="a";continue}
+    if((m=l.match(/^(?:həll|izah|solution)\s*[:：]\s*(.*)$/i))){c.solution=m[1];mode="s";continue}
+    if(mode==="t")c.text+="\n"+raw;
+    else if(mode==="s")c.solution+="\n"+raw;
+    else if(mode==="o"&&l&&c.options.length)c.options[c.options.length-1]+=" "+l}
+  push();return out}
+$("#bgo").onclick=()=>{
+  const r=parseBulk($("#bt").value),el=$("#note");
+  if(!r.length){note(el,"Heç bir sual tanınmadı. Hər sual 1. 2. 3. kimi nömrə ilə başlamalıdır.","err");return}
+  S.q=(S.q.length===1&&!S.q[0].text.trim())?r:[...S.q,...r];
+  $("#bt").value="";$("#bulk").hidden=true;render();save();note(el,r.length+" sual əlavə olundu. Yoxla və dərc et.","ok")};
+
+/* yoxlama və dərc */
+function validate(){
+  const e=[],d=new Date(S.date+"T00:00:00");
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(S.date)||isNaN(d))e.push("Tarix düzgün deyil.");
+  S.q.forEach((q,i)=>{const n="Sual "+(i+1)+": ";
+    if(!q.text.trim())e.push(n+"mətn boşdur.");
+    if(q.type==="mcq"){
+      if(q.options.some(o=>!o.trim()))e.push(n+"boş variant var (doldur və ya − variant ilə sil).");
+      if(q.answer&&!L.slice(0,q.options.length).includes(q.answer))e.push(n+"cavab variantlardan biri olmalıdır.")}});
+  return e}
+function clean(q){
+  const o={text:q.text.trim()};
+  if(q.type==="mcq"){o.options=q.options.map(x=>x.trim());if(q.answer)o.answer=q.answer}
+  else if(q.answer.trim())o.answer=q.answer.trim();
+  if(q.solution.trim())o.solution=q.solution.trim();
+  if(q.img.trim())o.img=q.img.trim();
+  return o}
+$("#pub").onclick=async()=>{
+  const el=$("#note"),errs=validate();
+  if(errs.length){note(el,errs.join("\n"),"err");return}
+  if(days.some(d=>d.date===S.date)&&!confirm(S.date+" tarixində suallar var. Əvəz edilsin?"))return;
+  const btn=$("#pub");btn.disabled=true;note(el,"Dərc edilir…","");
+  try{
+    const day={date:S.date,items:S.q.map(clean)};if(S.title.trim())day.title=S.title.trim();
+    days=(await commit(d=>{d.days=d.days.filter(x=>x.date!==day.date);d.days.push(day)},"Gündəlik suallar: "+day.date)).days;
+    pastList();dnote();try{localStorage.removeItem(DR)}catch(e){}
+    note(el,"Dərc olundu. Saytda 1–2 dəqiqəyə görünəcək.","ok")
+  }catch(e){note(el,e.message+"\nSuallar qaralamada saxlanılıb, itməyəcək.","err")}
+  btn.disabled=false};
+
+/* giriş */
+async function unlock(c,t){
+  cfg=c;tok=t;$("#gate").hidden=true;$("#app").hidden=false;$("#out").hidden=false;
+  try{const x=JSON.parse(localStorage.getItem(DR)||"null");if(x&&Array.isArray(x.q)&&x.q.length)S=x}catch(e){}
+  if(!S.q.length)S.q=[blank()];
+  render();pastList();
+  try{days=(await getFile()).data.days;pastList();dnote()}
+  catch(e){note($("#note"),"Əvvəlki günlər yüklənmədi: "+e.message,"err")}}
+let stored=null;try{stored=localStorage.getItem(LS)}catch(e){}
+$("#setup").hidden=!!stored;$("#login").hidden=!stored;
+$("#gt").textContent=stored?"Giriş":"İlk qurulum";$("#go").textContent=stored?"Daxil ol":"Saxla və daxil ol";
+$("#out").onclick=()=>location.reload();
+$("#reset").onclick=()=>{if(confirm("Saxlanmış token silinsin?")){localStorage.removeItem(LS);location.reload()}};
+$("#gf").addEventListener("submit",async ev=>{
+  ev.preventDefault();const g=$("#gnote"),btn=$("#go");btn.disabled=true;note(g,"","");
+  try{
+    if(!(window.crypto&&crypto.subtle))throw new Error("Brauzer şifrələməni dəstəkləmir. Səhifəni https və ya localhost üzərindən aç.");
+    if(stored){
+      const c=JSON.parse(stored);let t;
+      try{t=await unseal(c.blob,$("#pw2").value)}catch(x){throw new Error("Parol səhvdir.")}
+      await unlock(c,t);return}
+    const m=$("#repo").value.trim().match(/^([\w.-]+)\/([\w.-]+)$/),b=$("#br").value.trim(),pw=$("#pw1").value,t=$("#tok").value.trim();
+    if(!m)throw new Error("Repo sahib/ad formatında olmalıdır.");
+    if(!b)throw new Error("Branch adını yaz.");
+    if(pw.length<6)throw new Error("Parol ən azı 6 simvol olmalıdır.");
+    if(!t)throw new Error("GitHub token-i yapışdır.");
+    cfg={o:m[1],r:m[2],b};tok=t;
+    const r=await net(`https://api.github.com/repos/${cfg.o}/${cfg.r}`,{headers:H()});
+    if(!r.ok)throw await ghErr(r);
+    const j=await r.json();
+    if(j.permissions&&!j.permissions.push)throw new Error("Token-də yazma icazəsi yoxdur. Contents: Read and write seç.");
+    const c={...cfg,blob:await seal(t,pw)};
+    localStorage.setItem(LS,JSON.stringify(c));
+    await unlock(cfg,t)
+  }catch(x){note(g,x.message,"err")}
+  finally{btn.disabled=false}});
+</script>
+</body>
+</html>
