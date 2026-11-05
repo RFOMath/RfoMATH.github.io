@@ -1,0 +1,23 @@
+{
+ "v": 1,
+ "days": [
+  {
+   "date": "2026-11-05",
+   "items": [
+    {
+     "text": "Bir-birindən fərqli ikirəqəmli dörd natural ədədin cəmi neçə fərqli qiymət ala bilər?",
+     "options": [
+      "327",
+      "345",
+      "374",
+      "392",
+      "414"
+     ],
+     "answer": "B",
+     "solution": "Dörd ən böyük ikirəqəmli ədədlərin cəmindən , dörd ən kiçik ikirəqəmli ədədlərin cəmini çıxıb , üzərinə 1 əlavə edin (n-say düsturu)"
+    }
+   ],
+   "title": "Həqiqi ədədlər"
+  }
+ ]
+}
