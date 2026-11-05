@@ -110,6 +110,67 @@ footer{padding:50px 0 40px;text-align:center;color:var(--muted);font-size:.9rem}
 .row .actions{flex:none}
 .row .btn{flex:none;padding:8px 20px}
 
+[hidden]{display:none!important}
+.stats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px;animation:rise 1s .45s cubic-bezier(.2,.8,.2,1) both}
+.stats span{padding:8px 18px;border-radius:999px;font-size:.9rem;color:var(--muted)}
+.stats b{color:var(--text);font:800 1.1rem var(--display);margin-right:4px}
+.tabs{display:flex;gap:6px;padding:6px;border-radius:999px;width:max-content;max-width:100%;overflow-x:auto;margin:26px auto 14px;position:sticky;top:80px;z-index:15;scrollbar-width:none;scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{padding:10px 20px;border-radius:999px;font-weight:600;text-decoration:none;color:var(--muted);white-space:nowrap;transition:color .3s,background .3s}
+.tabs a:hover{color:var(--text)}
+.tabs a[aria-selected="true"]{background:linear-gradient(135deg,var(--a),var(--b));color:#fff;box-shadow:0 8px 22px color-mix(in srgb,var(--a) 45%,transparent)}
+main>section:not([hidden]){animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+.crumbs .sortb{margin-left:auto;padding:6px 14px;border-radius:999px;border:1px solid var(--glass-b);background:var(--glass);cursor:pointer;font-weight:600;font-size:.85rem}
+.years{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.yearc{align-items:flex-start;justify-content:space-between;gap:12px;min-height:158px;text-decoration:none;color:inherit}
+.yr{font:800 2.7rem/1 var(--display);letter-spacing:-.04em;background:linear-gradient(135deg,hsl(var(--h) 90% 72%),hsl(calc(var(--h) + 60) 90% 62%));-webkit-background-clip:text;background-clip:text;color:transparent}
+.yr i{font-style:normal;font-size:1.3rem;opacity:.7}
+.pills{display:flex;gap:5px;flex-wrap:wrap}
+.pills em{font-style:normal;font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--glass);border:1px solid var(--glass-b);color:var(--muted)}
+.yearc small,.stage small{color:var(--muted)}
+.steps{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.stage{flex-direction:row;align-items:center;gap:16px;padding:24px;text-decoration:none;color:inherit}
+.stage .no{flex:none;width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font:800 1.3rem var(--display);color:#fff;background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 85% 55%));box-shadow:0 0 0 7px hsl(var(--h) 90% 65% / .16)}
+.stage span b{display:block;font:700 1.12rem var(--display)}
+.gb{flex:none;width:52px;height:52px;border-radius:16px;display:grid;place-content:center;text-align:center;color:#fff;line-height:1;background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 85% 55%))}
+.gb b{font:800 1.35rem var(--display)}
+.gb small{font-size:.6rem;font-weight:600;opacity:.9;margin-top:2px}
+.bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:30px 20px;margin-top:20px}
+.bk{display:flex;flex-direction:column;gap:8px}
+.cv{position:relative;aspect-ratio:3/4;border-radius:6px 14px 14px 6px;overflow:hidden;cursor:pointer;background:linear-gradient(145deg,hsl(var(--h) 70% 48%),hsl(calc(var(--h) + 60) 70% 30%));box-shadow:0 18px 34px rgba(0,0,0,.4),inset 6px 0 8px rgba(0,0,0,.25);transition:transform .45s cubic-bezier(.2,.8,.2,1);transform-origin:left center}
+.cv::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,255,255,.3),transparent 20%,transparent 70%,rgba(0,0,0,.18));pointer-events:none}
+.bk:hover .cv{transform:perspective(900px) rotateY(-14deg) translateY(-5px)}
+.cv canvas,.cv img{width:100%;height:100%;object-fit:cover;display:block}
+.cv .fb{display:grid;place-items:center;height:100%;padding:16px;text-align:center;color:#fff;font:800 1.1rem/1.25 var(--display)}
+.bk h3{font:700 .98rem/1.3 var(--display)}
+.bk .actions .btn{padding:8px 10px}
+.days{display:flex;gap:10px;overflow-x:auto;padding:6px 2px 14px;margin-top:16px;scrollbar-width:thin}
+.day{flex:none;width:68px;padding:10px 0;text-align:center;border-radius:18px;border:1px solid var(--glass-b);background:var(--glass);text-decoration:none;color:inherit;transition:transform .25s}
+.day:hover{transform:translateY(-3px)}
+.day b{display:block;font:800 1.4rem/1 var(--display)}
+.day small{color:var(--muted);font-size:.72rem}
+.day.on{background:linear-gradient(135deg,var(--a),var(--b));border-color:transparent;color:#fff}
+.day.on small{color:#fff}
+.dt{font:700 1.2rem var(--display);margin:6px 0 14px}
+.q{display:flex;gap:16px;padding:20px;border-radius:22px;margin-bottom:14px}
+.qn{flex:none;width:40px;height:40px;border-radius:13px;display:grid;place-items:center;font:800 1.1rem var(--display);color:#fff;background:linear-gradient(135deg,var(--a),var(--c))}
+.qb{flex:1;min-width:0}
+.qt{font-size:1.05rem;line-height:1.75;overflow-wrap:anywhere}
+.qi{max-width:100%;border-radius:12px;margin-top:12px;background:#fff}
+.opts{display:grid;gap:8px;margin-top:14px}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;padding:10px 14px;border-radius:14px;border:1px solid var(--glass-b);background:var(--glass);cursor:pointer;transition:background .25s,transform .25s}
+.opt:hover{transform:translateX(3px)}
+.opt b{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:var(--glass-hi);font-size:.85rem}
+.opt.on{outline:2px solid var(--b)}
+.opt.ok{background:rgba(34,197,94,.28);border-color:#22c55e}
+.opt.bad{background:rgba(239,68,68,.25);border-color:#ef4444}
+.rev{margin-top:14px;flex:none;padding:8px 18px;cursor:pointer}
+.ans{margin-top:12px;padding:14px;border-radius:14px;background:var(--glass);border:1px dashed var(--glass-b);line-height:1.7}
+footer small{letter-spacing:.05em;opacity:.85}
+footer .lock{opacity:.3;text-decoration:none;margin-left:8px;transition:opacity .3s}
+footer .lock:hover{opacity:1}
+@media (max-width:560px){.tabs{top:76px}.q{flex-direction:column;gap:10px}}
+
 /* viewer */
 .modal{position:fixed;inset:0;z-index:50;display:none;padding:clamp(0px,2vw,24px);background:rgba(5,8,20,.6);backdrop-filter:blur(8px)}
 .modal.open{display:block;animation:fade .3s both}
@@ -142,12 +203,17 @@ footer{padding:50px 0 40px;text-align:center;color:var(--muted);font-size:.9rem}
   <section class="hero">
     <h1>Riyaziyyat <span>olimpiadası</span> arxivi</h1>
     <p>Keçmiş illərin tapşırıqları və həlləri. Səhifədən çıxmadan oxu, ya da PDF-i yüklə.</p>
-    <label class="search glass">
+    <label class="search glass" id="sbox">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input id="q" type="search" placeholder="Axtar: ad, il, mövzu…" autocomplete="off" aria-label="Axtar">
       <kbd>/</kbd>
     </label>
+    <div class="stats" id="stats"></div>
   </section>
+
+  <nav class="tabs glass" id="tabs" aria-label="Bölmələr">
+    <a href="#a/" data-t="a">Arxiv</a><a href="#k" data-t="k">Kitablar</a><a href="#s" data-t="s">Gündəlik suallar</a><a href="#m" data-t="m">Mövzular</a>
+  </nav>
 
   <section id="archive" hidden>
     <h2 class="sec">Keçmiş illərin arxivi</h2>
@@ -157,7 +223,21 @@ footer{padding:50px 0 40px;text-align:center;color:var(--muted);font-size:.9rem}
     <div class="rows" id="afiles"></div>
   </section>
 
-  <section id="topics">
+  <section id="books" hidden>
+    <h2 class="sec">Kitablar</h2>
+    <p class="sub">Kitabı saytda oxu, ya da PDF kimi yüklə.</p>
+    <div class="chips" id="bchips" style="margin-top:16px"></div>
+    <div class="bgrid" id="bgrid"></div>
+  </section>
+
+  <section id="daily" hidden>
+    <h2 class="sec">Gündəlik suallar</h2>
+    <p class="sub">Hər gün yeni suallar. Əvvəlki günlərə də qayıdıb baxa bilərsən.</p>
+    <div class="days" id="days"></div>
+    <div id="dayview"></div>
+  </section>
+
+  <section id="topics" hidden>
   <h2 class="sec">Mövzular üzrə</h2>
   <div class="tools">
     <div class="chips" id="chips"></div>
@@ -172,7 +252,7 @@ footer{padding:50px 0 40px;text-align:center;color:var(--muted);font-size:.9rem}
   <button class="btn glass more" id="more" hidden>Daha çox göstər</button>
   </section>
 </main>
-<footer>Riyaziyyat olimpiadası arxivi</footer>
+<footer><small>Created by Jovzizadeh Elmir</small><a class="lock" href="admin.html" aria-label="Admin" title="Admin">&#128274;</a></footer>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
   <div class="panel glass">
@@ -212,7 +292,7 @@ tb.onclick=()=>setTheme(root.dataset.theme==="dark"?"light":"dark");
 $("#chips").innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
 $("#chips").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;cat=b.dataset.c;
   document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));shown=PAGE;render()};
-$("#q").oninput=()=>{shown=PAGE;render();renderArch()};
+$("#q").oninput=()=>{shown=PAGE;route()};
 $("#sort").onchange=()=>{shown=PAGE;render()};
 $("#more").onclick=()=>{shown+=PAGE;render()};
 
@@ -279,7 +359,8 @@ addEventListener("keydown",e=>{
 render();
 
 /* archive explorer: folders from arxiv/ */
-const TREE=window.TREE||{d:{},f:[]};
+const fix=n=>{n.d=n.d||{};n.f=n.f||[];Object.values(n.d).forEach(fix);return n};
+const TREE=fix(window.TREE||{});
 const ORD={"rayon turu":1,"yarımfinal":2,"final":3};
 const cmp=(a,b)=>((ORD[a.toLowerCase()]||0)-(ORD[b.toLowerCase()]||0))||a.localeCompare(b,"az",{numeric:true});
 const cnt=n=>n.c??(n.c=n.f.length+Object.values(n.d).reduce((s,x)=>s+cnt(x),0));
@@ -288,8 +369,11 @@ const href=p=>"#a/"+p.map(encodeURIComponent).join("/");
 const curPath=()=>{try{return location.hash.startsWith("#a/")?location.hash.slice(3).split("/").filter(Boolean).map(decodeURIComponent):[]}catch(e){return[]}};
 const walk=p=>p.reduce((n,s)=>n&&n.d[s],TREE);
 function*allFiles(n,p){for(const f of n.f)yield{f,p};for(const k of Object.keys(n.d))yield*allFiles(n.d[k],[...p,k])}
-const row=(f,sub)=>`<div class="row glass" style="--h:${hue(f.name)}"><div class="ic">PDF</div><div class="rn">${esc(f.name)}${sub?`<small>${esc(sub)}</small>`:""}</div>
-  <div class="actions"><button class="btn primary" data-f="${esc(f.file)}" data-n="${esc(f.name)}">Bax</button><a class="btn" href="${url(f.file)}" download="${esc(f.file.split("/").pop())}">Yüklə</a></div></div>`;
+const gradeOf=n=>{let m=n.match(/(\d{1,2})\s*-?\s*(?:ci|cu|cı|cü|ı|i|u|ü)?\s*sinif/i);
+  if(m)return{t:m[1],s:"sinif",h:({8:170,9:200,10:250,11:300})[m[1]]??hue(m[1])};
+  m=n.match(/(aşağı|yuxarı)\s*yaş/i);return m?{t:m[1][0].toUpperCase(),s:"yaş",h:/aşağı/i.test(m[1])?170:300}:null};
+const row=(f,sub)=>{const g=gradeOf(f.name);return `<div class="row glass" style="--h:${g?g.h:hue(f.name)}"><div class="gb">${g?`<b>${g.t}</b><small>${g.s}</small>`:"<b>PDF</b>"}</div><div class="rn">${esc(f.name)}${sub?`<small>${esc(sub)}</small>`:""}</div>
+  <div class="actions"><button class="btn primary" data-f="${esc(f.file)}" data-n="${esc(f.name)}">Bax</button><a class="btn" href="${url(f.file)}" download="${esc(f.file.split("/").pop())}">Yüklə</a></div></div>`};
 function renderArch(){
   const sec=$("#archive");
   if(!Object.keys(TREE.d).length&&!TREE.f.length){sec.hidden=true;return}
@@ -304,13 +388,91 @@ function renderArch(){
   let path=curPath(),node=walk(path);
   if(!node){path=[];node=TREE}
   C.innerHTML=`<a href="#a/"${path.length?"":' aria-current="page"'}>Arxiv</a>`+path.map((s,i)=>`<span>/</span><a href="${href(path.slice(0,i+1))}"${i===path.length-1?' aria-current="page"':""}>${esc(s)}</a>`).join("");
-  F.innerHTML=Object.keys(node.d).sort(cmp).map(n=>`<a class="card glass folder" style="--h:${hue(n)}" href="${href([...path,n])}">${FOLDER}<span><b>${esc(n)}</b><small>${cnt(node.d[n])} fayl</small></span></a>`).join("");
+  const names=Object.keys(node.d).sort(cmp),yrs=names.length>0&&names.every(isYear),stg=names.length>0&&names.every(k=>ORD[k.toLowerCase()]);
+  if(yrs&&!asc)names.reverse();
+  F.className="grid"+(yrs?" years":stg?" steps":"");
+  if(yrs)C.innerHTML+=`<button class="sortb" id="ysort">${asc?"Köhnədən yeniyə":"Yenidən köhnəyə"}</button>`;
+  F.innerHTML=names.map(k=>{const x=node.d[k],h2=href([...path,k]);
+    if(yrs){const y=parseInt(k);return `<a class="card glass yearc" style="--h:${y*37%360}" href="${h2}"><span class="yr">${y}<i>–${esc(k.split(/\s*[-–]\s*/)[1])}</i></span><span class="pills">${Object.keys(x.d).sort(cmp).map(z=>`<em>${esc(z)}</em>`).join("")}</span><small>${cnt(x)} fayl</small></a>`}
+    if(stg){const o=ORD[k.toLowerCase()];return `<a class="card glass stage" style="--h:${({1:200,2:270,3:330})[o]}" href="${h2}"><b class="no">${o}</b><span><b>${esc(k)}</b><small>${cnt(x)} fayl</small></span></a>`}
+    return `<a class="card glass folder" style="--h:${hue(k)}" href="${h2}">${FOLDER}<span><b>${esc(k)}</b><small>${cnt(x)} fayl</small></span></a>`}).join("");
   R.innerHTML=[...node.f].sort((a,b)=>cmp(a.name,b.name)).map(f=>row(f)).join("")||(Object.keys(node.d).length?"":`<div class="empty">Bu qovluq boşdur.</div>`);
 }
 $("#archive").addEventListener("click",e=>{const b=e.target.closest("[data-f]");if(b)openPdf({name:b.dataset.n,file:b.dataset.f})});
-addEventListener("hashchange",()=>{renderArch();if(location.hash.startsWith("#a/"))$("#archive").scrollIntoView({behavior:"smooth",block:"start"})});
-$("#topics").hidden=!list.length;
-renderArch();
+
+const isYear=k=>/^\d{4}\s*[-–]\s*\d{4}$/.test(k);
+let asc=true;
+$("#crumbs").addEventListener("click",e=>{if(e.target.id==="ysort"){asc=!asc;renderArch()}});
+
+/* kitablar */
+const BOOKS=window.BOOKS||[];let bcat="Hamısı",cq=Promise.resolve();
+const bcard=b=>`<article class="bk" style="--h:${hue(b.name)}"><div class="cv" data-f="${esc(b.file)}" data-n="${esc(b.name)}"${b.cover?"":" data-pdf"}>${b.cover?`<img src="${esc(url(b.cover))}" alt="${esc(b.name)}" loading="lazy">`:`<div class="fb"><span>${esc(b.name)}</span></div>`}</div>
+  <h3>${esc(b.name)}</h3><div class="year">${esc(b.cat||"Kitablar")}${b.size?" · "+b.size+" MB":""}</div>
+  <div class="actions"><button class="btn primary" data-f="${esc(b.file)}" data-n="${esc(b.name)}">Bax</button><a class="btn" href="${url(b.file)}" download="${esc(b.file.split("/").pop())}">Yüklə</a></div></article>`;
+async function cover(el){try{await loadLib();const d=await pdfjsLib.getDocument(url(el.dataset.f)).promise,pg=await d.getPage(1),v=pg.getViewport({scale:420/pg.getViewport({scale:1}).width}),c=document.createElement("canvas");
+  c.width=v.width;c.height=v.height;await pg.render({canvasContext:c.getContext("2d"),viewport:v}).promise;el.replaceChildren(c);d.destroy()}catch(e){}}
+const io=window.IntersectionObserver?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){io.unobserve(e.target);cq=cq.then(()=>cover(e.target))}}),{rootMargin:"250px"}):null;
+function renderBooks(){
+  const q=$("#q").value.trim().toLowerCase(),cs=["Hamısı",...new Set(BOOKS.map(b=>b.cat||"Kitablar"))];
+  if(!cs.includes(bcat))bcat="Hamısı";
+  $("#bchips").innerHTML=cs.length>2?cs.map(c=>`<button class="chip" aria-pressed="${c===bcat}" data-c="${esc(c)}">${esc(c)}</button>`).join(""):"";
+  const r=BOOKS.filter(b=>(bcat==="Hamısı"||(b.cat||"Kitablar")===bcat)&&(!q||b.name.toLowerCase().includes(q)));
+  $("#bgrid").innerHTML=r.length?r.map(bcard).join(""):`<div class="empty" style="grid-column:1/-1">${BOOKS.length?"Heç nə tapılmadı.":"Kitablar tezliklə əlavə olunacaq."}</div>`;
+  document.querySelectorAll("#bgrid .cv[data-pdf]").forEach(el=>io?io.observe(el):cover(el));
+}
+$("#bchips").onclick=e=>{const b=e.target.closest(".chip");if(b){bcat=b.dataset.c;renderBooks()}};
+$("#books").addEventListener("click",e=>{const b=e.target.closest("[data-f]");if(b)openPdf({name:b.dataset.n,file:b.dataset.f})});
+
+/* gündəlik suallar */
+const K="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/",LT="ABCDE";let DAYS=null,dayErr=false,curDay=null,kP=null;
+function loadMath(){return kP||(kP=new Promise((ok,no)=>{const l=document.createElement("link");l.rel="stylesheet";l.href=K+"katex.min.css";document.head.appendChild(l);
+  const a=document.createElement("script");a.src=K+"katex.min.js";a.onload=()=>{const b=document.createElement("script");b.src=K+"contrib/auto-render.min.js";b.onload=ok;b.onerror=no;document.head.appendChild(b)};a.onerror=no;document.head.appendChild(a)}))}
+async function renderMath(el){try{await loadMath();renderMathInElement(el,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false},{left:"\\[",right:"\\]",display:true}],throwOnError:false})}catch(e){}}
+async function loadDays(){if(DAYS)return;
+  try{const r=await fetch("data/questions.json?v="+Math.floor(Date.now()/6e4),{cache:"no-cache"});if(!r.ok)throw 0;const j=await r.json();
+    DAYS=(j.days||[]).filter(d=>d&&/^\d{4}-\d{2}-\d{2}$/.test(d.date)&&Array.isArray(d.items)).sort((a,b)=>b.date.localeCompare(a.date))}
+  catch(e){DAYS=[];dayErr=true}}
+const fx=t=>esc(t).replace(/\n/g,"<br>");
+const dFmt=d=>{const x=new Date(d+"T00:00:00");return isNaN(x)?d:x.toLocaleDateString("az-AZ",{weekday:"long",day:"numeric",month:"long",year:"numeric"})};
+const dMon=d=>{const x=new Date(d+"T00:00:00");return isNaN(x)?"":x.toLocaleDateString("az-AZ",{month:"short"})};
+const qcard=(q,i)=>`<article class="q glass" data-i="${i}"><div class="qn">${i+1}</div><div class="qb"><div class="qt">${fx(q.text||"")}</div>${q.img?`<img class="qi" src="${esc(url(q.img))}" alt="">`:""}
+  ${q.options&&q.options.length?`<div class="opts">${q.options.map((o,j)=>`<button class="opt" data-j="${j}"><b>${LT[j]}</b><span>${fx(o)}</span></button>`).join("")}</div>`:""}
+  ${q.answer||q.solution?`<button class="btn rev" data-r>Cavabı göstər</button><div class="ans" hidden>${q.answer?`<p><b>Cavab:</b> ${fx(String(q.answer))}</p>`:""}${q.solution?`<div>${fx(q.solution)}</div>`:""}</div>`:""}</div></article>`;
+async function renderDaily(){
+  await loadDays();if(tabOf()!=="s")return;
+  const ds=$("#days"),dv=$("#dayview");
+  if(dayErr||!DAYS.length){ds.innerHTML="";dv.innerHTML=`<div class="empty">${dayErr?"Suallar yüklənmədi. Bir az sonra yenidən yoxla.":"Hələ sual paylaşılmayıb."}</div>`;return}
+  const m=location.hash.match(/^#s\/(\d{4}-\d{2}-\d{2})/);
+  curDay=DAYS.find(d=>m&&d.date===m[1])||DAYS[0];
+  ds.innerHTML=DAYS.map(d=>`<a class="day${d===curDay?" on":""}" href="#s/${d.date}" title="${d.items.length} sual"><b>${+d.date.slice(8)}</b><small>${esc(dMon(d.date))}</small></a>`).join("");
+  dv.innerHTML=`<h3 class="dt">${esc(dFmt(curDay.date))}${curDay.title?" · "+esc(curDay.title):""}</h3>`+curDay.items.map(qcard).join("");
+  renderMath(dv);
+}
+$("#daily").addEventListener("click",e=>{
+  const o=e.target.closest(".opt"),r=e.target.closest("[data-r]");
+  if(o){const qa=o.closest(".q"),q=curDay&&curDay.items[+qa.dataset.i];if(!q)return;
+    const opts=qa.querySelectorAll(".opt");opts.forEach(x=>x.classList.remove("on","ok","bad"));o.classList.add("on");
+    if(q.answer){const right=LT.indexOf(String(q.answer).trim().toUpperCase()[0]);
+      opts.forEach((x,k)=>{if(k===right)x.classList.add("ok");else if(x===o)x.classList.add("bad")});
+      const a=qa.querySelector(".ans");if(a)a.hidden=false}}
+  if(r){const a=r.closest(".q").querySelector(".ans");a.hidden=!a.hidden;r.textContent=a.hidden?"Cavabı göstər":"Cavabı gizlət"}});
+
+/* naviqasiya */
+const SEC={a:"archive",k:"books",s:"daily",m:"topics"};
+const PH={a:"Arxivdə axtar: il, sinif, mərhələ…",k:"Kitab axtar…",m:"Axtar: ad, il, mövzu…"};
+function tabOf(){const h=location.hash;return h.startsWith("#k")?"k":h.startsWith("#s")?"s":(h.startsWith("#m")&&list.length)?"m":"a"}
+function route(){
+  const t=tabOf();
+  for(const k in SEC)$("#"+SEC[k]).hidden=k!==t;
+  document.querySelectorAll("#tabs a").forEach(a=>a.setAttribute("aria-selected",a.dataset.t===t));
+  $("#sbox").style.display=t==="s"?"none":"";$("#q").placeholder=PH[t]||"";
+  if(t==="a")renderArch();else if(t==="k")renderBooks();else if(t==="s")renderDaily();else render();
+}
+addEventListener("hashchange",()=>{route();$("#tabs").scrollIntoView({behavior:"smooth",block:"start"})});
+$('#tabs a[data-t="m"]').hidden=!list.length;
+(function(){const yrs=Object.values(TREE.d).reduce((s,n)=>s+Object.keys(n.d).filter(isYear).length,0);
+  $("#stats").innerHTML=[[cnt(TREE),"arxiv faylı"],[yrs,"tədris ili"],[BOOKS.length,"kitab"]].filter(x=>x[0]).map(x=>`<span class="glass"><b>${x[0]}</b>${x[1]}</span>`).join("")})();
+route();
 </script>
 </body>
 </html>
