@@ -1,0 +1,68 @@
+{
+  "id": "./",
+  "name": "Riyaziyyat olimpiadası arxivi",
+  "short_name": "Olimpiada",
+  "description": "Keçmiş illərin riyaziyyat olimpiadası tapşırıqları, kitablar və gündəlik suallar. PDF-ləri saytda oxu, offline da işləyir.",
+  "lang": "az",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "any",
+  "background_color": "#0a0e22",
+  "theme_color": "#0a0e22",
+  "categories": ["education", "books", "productivity"],
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "icons/icon-72.png", "sizes": "72x72", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-96.png", "sizes": "96x96", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-144.png", "sizes": "144x144", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-152.png", "sizes": "152x152", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-384.png", "sizes": "384x384", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [
+    {
+      "src": "icons/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Arxiv bölməsi — illər və mərhələlər üzrə"
+    },
+    {
+      "src": "icons/screenshot-narrow.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Gündəlik suallar — telefonda"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Gündəlik suallar",
+      "short_name": "Suallar",
+      "description": "Bugünkü sualları aç",
+      "url": "./#s",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Kitablar",
+      "short_name": "Kitablar",
+      "description": "Kitabxanaya keç",
+      "url": "./#k",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Arxiv",
+      "short_name": "Arxiv",
+      "description": "Keçmiş illərin arxivi",
+      "url": "./#a/",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}
