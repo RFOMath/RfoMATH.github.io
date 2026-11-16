@@ -1,1 +1,14 @@
-{"v":1,"books":[],"archive":[],"hidden":[]}
+{
+ "v": 1,
+ "books": [
+  {
+   "name": "Altınnokta",
+   "file": "kitablar/altinnokta.pdf",
+   "cat": "Rfo",
+   "size": 5,
+   "cover": "kitablar/_covers/altinnokta.webp"
+  }
+ ],
+ "archive": [],
+ "hidden": []
+}
