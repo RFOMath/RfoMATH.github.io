@@ -9,6 +9,19 @@
    "cover": "kitablar/_covers/altinnokta.webp"
   }
  ],
- "archive": [],
+ "archive": [
+  {
+   "name": "Riyaziyyat 9-cu sinif",
+   "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Yarımfinal/Riyaziyyat 9-cu sinif.pdf",
+   "path": [
+    "arxiv",
+    "Keçmiş illərin RFO-su",
+    "2020-2021",
+    "Yarımfinal"
+   ],
+   "year": "2020-2021",
+   "stage": "Yarımfinal"
+  }
+ ],
  "hidden": []
 }
