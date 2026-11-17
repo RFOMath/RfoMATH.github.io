@@ -185,6 +185,10 @@ window.TREE = {
         {
          "name": "Riyaziyyat aşağı yaş qrupu",
          "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Yarımfinal/Riyaziyyat aşağı yaş qrupu.pdf"
+        },
+        {
+         "name": "Riyaziyyat yuxarı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Yarımfinal/Riyaziyyat yuxarı yaş qrupu.pdf"
         }
        ]
       }
