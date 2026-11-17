@@ -386,6 +386,13 @@ window.TREE = {
 };
 window.BOOKS = [
  {
+  "name": "ALTINNOKTA 1",
+  "file": "kitablar/ALTINNOKTA 1.pdf",
+  "cat": "Kitablar",
+  "size": 5,
+  "cover": "kitablar/ALTINNOKTA 1.jpg"
+ },
+ {
   "name": "ALTINNOKTA 2",
   "file": "kitablar/ALTINNOKTA 2.pdf",
   "cat": "Kitablar",
@@ -398,12 +405,5 @@ window.BOOKS = [
   "cat": "Kitablar",
   "size": 7,
   "cover": "kitablar/ALTINNOKTA 3.jpg"
- },
- {
-  "name": "Altinnokta 1",
-  "file": "kitablar/Altinnokta 1.pdf",
-  "cat": "Kitablar",
-  "size": 5,
-  "cover": "kitablar/Altinnokta 1.jpg"
  }
 ];
