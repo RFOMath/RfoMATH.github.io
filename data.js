@@ -393,6 +393,13 @@ window.BOOKS = [
   "cover": "kitablar/ALTINNOKTA 2.jpg"
  },
  {
+  "name": "ALTINNOKTA 3",
+  "file": "kitablar/ALTINNOKTA 3.pdf",
+  "cat": "Kitablar",
+  "size": 7,
+  "cover": "kitablar/ALTINNOKTA 3.jpg"
+ },
+ {
   "name": "Altinnokta",
   "file": "kitablar/altinnokta.pdf",
   "cat": "Kitablar",
