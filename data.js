@@ -386,6 +386,12 @@ window.TREE = {
 };
 window.BOOKS = [
  {
+  "name": "ALTINNOKTA 2",
+  "file": "kitablar/ALTINNOKTA 2.pdf",
+  "cat": "Kitablar",
+  "size": 4.7
+ },
+ {
   "name": "Altinnokta",
   "file": "kitablar/altinnokta.pdf",
   "cat": "Kitablar",
