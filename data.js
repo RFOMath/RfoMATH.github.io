@@ -153,15 +153,6 @@ window.TREE = {
     },
     "2020-2021": {
      "d": {
-      "Final": {
-       "d": {},
-       "f": [
-        {
-         "name": "Deneme",
-         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Final/Deneme.pdf"
-        }
-       ]
-      },
       "Rayon turu": {
        "d": {},
        "f": [
