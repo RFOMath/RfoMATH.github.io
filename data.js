@@ -178,6 +178,15 @@ window.TREE = {
          "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Rayon turu/Riyaziyyat 9-cu sinif.pdf"
         }
        ]
+      },
+      "Yarımfinal": {
+       "d": {},
+       "f": [
+        {
+         "name": "Aşağı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Yarımfinal/Aşağı yaş qrupu.pdf"
+        }
+       ]
       }
      },
      "f": []
