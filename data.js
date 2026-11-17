@@ -417,5 +417,12 @@ window.BOOKS = [
   "cat": "Kitablar",
   "size": 7,
   "cover": "kitablar/ALTINNOKTA 3.jpg"
+ },
+ {
+  "name": "ALTINNOKTA 4",
+  "file": "kitablar/ALTINNOKTA 4.pdf",
+  "cat": "Kitablar",
+  "size": 5.6,
+  "cover": "kitablar/ALTINNOKTA 4.jpg"
  }
 ];
