@@ -183,7 +183,7 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;padding:10px 0 40px;
     <div id="tab-a" hidden>
       <div class="glass pad">
         <h2>Keçmiş illərin sualları — PDF yüklə</h2>
-        <p class="hint" style="margin-top:0">Fayl <code>arxiv/</code> qovluğuna yazılır. Mövcud faylı əvəz etmək üçün eyni adı seç — köhnəsi yenisi ilə dəyişəcək.</p>
+        <p class="hint" style="margin-top:0">Fayl <code>Arxiv</code> qovluğuna yazılır. Mövcud faylı əvəz etmək üçün eyni adı seç — köhnəsi yenisi ilə dəyişəcək.</p>
         <div class="row2">
           <div><label for="ayear">Tədris ili</label><input id="ayear" placeholder="2025-2026" list="ayearlist"><datalist id="ayearlist"></datalist></div>
           <div><label for="astage">Mərhələ</label><input id="astage" placeholder="Rayon turu" list="astagelist"><datalist id="astagelist"><option value="Rayon turu"><option value="Yarımfinal"><option value="Final"></datalist></div>
@@ -529,12 +529,12 @@ $("#aup").onclick=async()=>{
   const prog=$("#apdfprog");prog.classList.add("show");
   try{
     const y=year.replace(/\s*[-–]\s*/,"-");
-    const path=["arxiv","Keçmiş illərin RFO-su",y,stage];
+    const path=["Keçmiş illərin RFO-su",y,stage];
     const filePath=path.join("/")+"/"+name.replace(/[\/\\]/g,"-")+".pdf";
     note(el,"PDF yüklənir…","");
     const data=await readB64(aPdf,p=>{prog.firstElementChild.style.width=(p*100).toFixed(0)+"%"});
     const old=await getRaw(filePath);
-    await putFile(filePath,data,"Arxiv: "+name+" ("+y+")",old?old.sha:null);
+    await putFile(filePath,data,"Keçmiş illərin RFO-su: "+name+" ("+y+")",old?old.sha:null);
     note(el,"Məlumat yenilənir…","");
     const r=await commitJson("data/library.json",{v:1,books:[],archive:[],hidden:[]},d=>{
       d.archive=d.archive||[];
