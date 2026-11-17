@@ -162,6 +162,15 @@ window.TREE = {
         }
        ]
       },
+      "Rayon turu": {
+       "d": {},
+       "f": [
+        {
+         "name": "Riyaziyyat 9-cu sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Rayon turu/Riyaziyyat 9-cu sinif.pdf"
+        }
+       ]
+      },
       "Yarımfinal": {
        "d": {},
        "f": [
