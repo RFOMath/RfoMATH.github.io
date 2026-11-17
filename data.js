@@ -170,6 +170,10 @@ window.TREE = {
          "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Rayon turu/Riyaziyyat 10-cu sinif.pdf"
         },
         {
+         "name": "Riyaziyyat 11-ci sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Rayon turu/Riyaziyyat 11-ci sinif.pdf"
+        },
+        {
          "name": "Riyaziyyat 9-cu sinif",
          "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Rayon turu/Riyaziyyat 9-cu sinif.pdf"
         }
