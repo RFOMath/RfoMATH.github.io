@@ -1,0 +1,114 @@
+{
+  "id": "/",
+  "name": "Riyaziyyat olimpiadası arxivi",
+  "short_name": "RFO Math",
+  "description": "Riyaziyyat olimpiadasının keçmiş illər üzrə tapşırıqları, kitablar və gündəlik suallar.",
+  "lang": "az",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0e22",
+  "theme_color": "#0a0e22",
+  "categories": [
+    "education"
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/monochrome-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "monochrome"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Arxiv",
+      "short_name": "Arxiv",
+      "description": "Keçmiş illərin tapşırıqları",
+      "url": "/#a/",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Kitablar",
+      "short_name": "Kitablar",
+      "description": "Kitabxana",
+      "url": "/#k",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Gündəlik suallar",
+      "short_name": "Suallar",
+      "description": "Bu günün sualları",
+      "url": "/#s",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/wide-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Arxiv bölməsi"
+    },
+    {
+      "src": "screenshots/narrow-1.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Ana səhifə"
+    },
+    {
+      "src": "screenshots/narrow-2.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Fayllar siyahısı"
+    }
+  ]
+}
