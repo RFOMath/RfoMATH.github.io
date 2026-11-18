@@ -153,12 +153,20 @@ window.TREE = {
     },
     "2020-2021": {
      "d": {
-      "Final": {
+      "Rayon turu": {
        "d": {},
        "f": [
         {
-         "name": "Deneme",
-         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Final/Deneme.pdf"
+         "name": "Riyaziyyat 10-cu sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Rayon turu/Riyaziyyat 10-cu sinif.pdf"
+        },
+        {
+         "name": "Riyaziyyat 11-ci sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Rayon turu/Riyaziyyat 11-ci sinif.pdf"
+        },
+        {
+         "name": "Riyaziyyat 9-cu sinif",
+         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Rayon turu/Riyaziyyat 9-cu sinif.pdf"
         }
        ]
       },
@@ -166,8 +174,12 @@ window.TREE = {
        "d": {},
        "f": [
         {
-         "name": "Riyaziyyat 9-cu sinif",
-         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Yarımfinal/Riyaziyyat 9-cu sinif.pdf"
+         "name": "Riyaziyyat aşağı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Yarımfinal/Riyaziyyat aşağı yaş qrupu.pdf"
+        },
+        {
+         "name": "Riyaziyyat yuxarı yaş qrupu",
+         "file": "arxiv/Keçmiş illərin RFO-su/2020-2021/Yarımfinal/Riyaziyyat yuxarı yaş qrupu.pdf"
         }
        ]
       }
@@ -386,6 +398,13 @@ window.TREE = {
 };
 window.BOOKS = [
  {
+  "name": "ALTINNOKTA 1",
+  "file": "kitablar/ALTINNOKTA 1.pdf",
+  "cat": "Kitablar",
+  "size": 5,
+  "cover": "kitablar/ALTINNOKTA 1.jpg"
+ },
+ {
   "name": "ALTINNOKTA 2",
   "file": "kitablar/ALTINNOKTA 2.pdf",
   "cat": "Kitablar",
@@ -393,10 +412,17 @@ window.BOOKS = [
   "cover": "kitablar/ALTINNOKTA 2.jpg"
  },
  {
-  "name": "Altinnokta",
-  "file": "kitablar/altinnokta.pdf",
+  "name": "ALTINNOKTA 3",
+  "file": "kitablar/ALTINNOKTA 3.pdf",
   "cat": "Kitablar",
-  "size": 5,
-  "cover": "kitablar/altinnokta.jpg"
+  "size": 7,
+  "cover": "kitablar/ALTINNOKTA 3.jpg"
+ },
+ {
+  "name": "ALTINNOKTA 4",
+  "file": "kitablar/ALTINNOKTA 4.pdf",
+  "cat": "Kitablar",
+  "size": 5.6,
+  "cover": "kitablar/ALTINNOKTA 4.jpg"
  }
 ];
